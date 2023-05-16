@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node":"16.x"
+    "node":"18.x"
   },
   "type": "module",
   "scripts": {
     "start": "node index.js",
+    "build":"npm install",
     "dev": "nodemon index.js"
   },
   "author": "chirag",

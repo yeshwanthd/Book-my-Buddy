@@ -8,8 +8,13 @@ import doctorRoutes from './routes/doctor.js'
 import cookieParser from 'cookie-parser';
 
 const app = express();
-app.use(cors());
-const port = 5000;
+app.use(cors({
+    origin: '*',
+    methods: ['POST', 'GET', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+const port = process.env.PORT || 5000;
 
 mongoose.connection.on("disconnected", () =>{console.log("Disconnected")})
 
